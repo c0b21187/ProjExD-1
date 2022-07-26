@@ -245,7 +245,7 @@ class Breakout:
         time = pg.time.get_ticks()
         time = time / 1000
         times = time * 10
-        score = int(count * 100 - times*1.5)
+        score = int(count * 100 - times * 1.5)
         tkm.showinfo("score",f"あなたの得点は{score}点です")
         tkm.showinfo("time",f"生存時間は{time}秒です")
 
@@ -261,7 +261,7 @@ class Breakout:
         '''ゲーム開始'''
         self.sound(0)    #ゲームが始まったらbgmを流す
         
-        if len(self.blocks) == 0 or len(self.balls) == 0:
+        if len(self.blocks) == False or len(self.balls) == False:
             # ゲームクリア or ゲームオーバー時は最初からやり直し
 
             # キャンバスの図形を全て削除
